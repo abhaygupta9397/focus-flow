@@ -16,6 +16,15 @@ body {
   text-shadow: 0 0 0.65rem rgb(103 232 249 / 0.7);
 }
 
+@keyframes task-title-scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+.task-title-marquee {
+  animation: task-title-scroll 12s linear infinite;
+}
+
 @keyframes task-slide-in {
   from {
     opacity: 0;
@@ -42,7 +51,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .task-item,
-  .task-number {
+  .task-number,
+  .task-title-marquee {
     animation: none;
   }
 }
