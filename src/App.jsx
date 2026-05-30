@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import TaskItem from './components/TaskItem.jsx'
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
@@ -56,9 +57,14 @@ function App() {
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-8">
-        <p className="text-center text-zinc-500 dark:text-zinc-400 mt-20">
-          Main Task Area Coming Soon...
-        </p>
+        <div className="space-y-4">
+          <TaskItem
+            number={1}
+            title="Find your focus here"
+            timeLeft="25:00"
+            status="inprogress"
+          />
+        </div>
       </main>
     </div>
   )
