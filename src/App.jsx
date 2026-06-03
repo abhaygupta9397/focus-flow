@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Moon, Plus, Sun } from 'lucide-react'
+import TaskAlarm from './components/TaskAlarm.jsx'
 import TaskItem from './components/TaskItem.jsx'
 
 const createTask = () => ({
@@ -20,6 +21,7 @@ function App() {
     },
   ])
   const [currentTime, setCurrentTime] = useState(new Date())
+  const [alarmTask, setAlarmTask] = useState(null)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -59,10 +61,16 @@ function App() {
   }, [])
 
   const completeTask = useCallback((taskId) => {
+    const completedTask = tasks.find((task) => task.id === taskId)
+
+    if (completedTask) {
+      setAlarmTask({ id: completedTask.id, title: completedTask.title })
+    }
+
     setTasks((currentTasks) => currentTasks.map((task) => (
       task.id === taskId ? { ...task, status: 'completed' } : task
     )))
-  }, [])
+  }, [tasks])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-100 via-amber-100 to-orange-200 text-amber-950 dark:from-zinc-950 dark:via-zinc-950 dark:to-zinc-950 dark:text-zinc-100">
@@ -136,6 +144,11 @@ function App() {
           ))}
         </div>
       </main>
+
+      <TaskAlarm
+        task={alarmTask}
+        onStop={() => setAlarmTask(null)}
+      />
     </div>
   )
 }
