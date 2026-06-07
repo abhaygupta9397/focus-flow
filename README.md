@@ -1,6 +1,6 @@
-![Focus Flow Preview](<Screenshot 2026-05-29 235022.png>)
-
 # Focus Flow
+
+<img width="1773" height="500" alt="image" src="https://github.com/user-attachments/assets/e9ea5262-3b26-4b0f-be24-e678c4b748a1" />
 
 Focus Flow is a simple daily productivity app designed to help you plan and complete your most important focus tasks of the day.
 
