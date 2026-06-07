@@ -61,3 +61,11 @@ npm run preview
 - JavaScript
 - HTML
 - CSS
+
+  ## Day Theme
+  <img width="1851" height="872" alt="Screenshot 2026-06-08 020207" src="https://github.com/user-attachments/assets/87ac1197-fd7c-43fc-b6a0-e6efd4d94fd1" />
+
+  ## Night Theme
+  <img width="1733" height="860" alt="Screenshot 2026-06-08 020224" src="https://github.com/user-attachments/assets/76c71d25-c792-465b-b084-293b2786a060" />
+
+
